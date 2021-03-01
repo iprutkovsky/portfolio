@@ -6,32 +6,29 @@
 	// screen saver
 	let screenSaver = () =>
 		$(document).ready(function () {
-			let t, s = 1000;
-			$(document).on('mousemove keydown click', function () {
-				clearTimeout(t);
-				t = setTimeout(function () {
-					let container = document.querySelector('.container');
-					container.innerHTML = '';
-					for (let i = 0; i <= 125; ++i) {
-						let blocks = document.createElement('div');
-						$(blocks).addClass('block');
-						container.appendChild(blocks);
-					}
+			let s = 1000;
+			setTimeout(function () {
+				let container = document.querySelector('.container');
+				container.innerHTML = '';
+				for (let i = 0; i <= 125; ++i) {
+					let blocks = document.createElement('div');
+					$(blocks).addClass('block');
+					container.appendChild(blocks);
+				}
 
-					let animeShuffle = () =>
-						anime({
-							targets: '.block',
-							translateX: () => anime.random(-520, 520),
-							translateY: () => anime.random(-340, 340),
-							scale: () => anime.random(.5, 3),
-							easing: 'linear',
-							duration: 9 * s,
-							delay: anime.stagger(9),
-							complete: animeShuffle
-						});
-					animeShuffle();
-				}, 5 * s);
-			}).click();
+				let animeShuffle = () =>
+					anime({
+						targets: '.block',
+						translateX: () => anime.random(-520, 520),
+						translateY: () => anime.random(-340, 340),
+						scale: () => anime.random(.5, 3),
+						easing: 'linear',
+						duration: 9 * s,
+						delay: anime.stagger(9),
+						complete: animeShuffle
+					});
+				animeShuffle();
+			}, 5 * s);
 		});
 
 	// Indicator of scrolling
