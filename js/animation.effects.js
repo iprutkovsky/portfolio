@@ -2,14 +2,16 @@
 
 	'use strict';
 	// -=Animations=-
-	// Jump to top
-	let jumpUp = function () {
+	
+	// Indicator of scrolling
+	let scrollIndicator = function () {
 		let rct = document.querySelector('#jumpToTop'),
 			cld = document.querySelector('#target_cloud'),
 			pgb = document.querySelector('.progress-bar'),
 			pct = document.querySelector('#progress-bar-output');
-		window.onscroll = function () {
-			if ($('html')[0].scrollTop > 20) {
+		window.addEventListener('scroll', function () {
+			let e = $('html')[0];
+			if (e.scrollTop > 20) {
 				rct.style.display = 'block';
 				cld.style.display = 'block';
 				pgb.style.display = 'block';
@@ -21,15 +23,8 @@
 				pgb.style.display = 'none';
 				pct.style.display = 'none';
 			}
-		};
-	}
-
-	// Indicator of scrolling
-	let scrollIndicator = function () {
-		window.addEventListener('scroll', function () {
-			let e = $('html')[0];
 			document.querySelector('#scrBar').style.height = `${e.scrollTop / (e.scrollHeight - e.clientHeight) * 100}%`;
-			document.querySelector('#jumpToTop').style.top = `${8 + e.scrollTop / (e.scrollHeight - e.clientHeight) * 82}%`;			
+			document.querySelector('#jumpToTop').style.top = `${8 + e.scrollTop / (e.scrollHeight - e.clientHeight) * 82}%`;
 			document.querySelector('#progress-bar-output').innerHTML = parseInt(document.querySelector('#scrBar').style.height);
 			document.querySelector('#progress-bar-output').style.top = `${8 + e.scrollTop / (e.scrollHeight - e.clientHeight) * 82}%`;
 		});
@@ -70,12 +65,9 @@
 		}, { offset: '85%' });
 	};
 
-
-
 	$(function () {
 		scrollIndicator();
 		contentWayPoint();
-		jumpUp();
 	});
 
 }());
