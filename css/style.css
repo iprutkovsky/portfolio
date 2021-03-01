@@ -10,9 +10,33 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.8;  
   background: url(../images/spiral_staircase.png) no-repeat fixed;
 }
+
+/* shuffle */
+
+.container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 5%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 96vh;
+}
+
+.block {
+  position: absolute;
+  width: 90px;
+  height: 35px;
+  background: url(../images/block_s.png);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* end: shuffle */
 
 ::-webkit-scrollbar {
   display: block;
@@ -25,9 +49,7 @@ body {
   width: 15px;
   background: linear-gradient(110deg, #fad648, #12bcfe, #44ce7b);
   animation: rotate 1s linear infinite;
-  border-radius: 5px;
-
-  
+  border-radius: 5px;  
 }
 
 hr {
@@ -41,6 +63,24 @@ hr {
 }
 
 /*Scroll indicator*/
+
+#target_cloud {
+  display: none;
+  position: fixed;
+  background: none;
+  top: 6%;
+  right: 1.8%;
+  z-index: 99;  
+}
+
+#jumpToTop {
+  display: none;
+  position: fixed;
+  background: none;
+  right: 2%;
+  z-index: 99;
+  cursor: pointer;
+}
 
 .scroll-indicator {
   position: fixed;
@@ -72,28 +112,6 @@ hr {
 }
 
 /*Scroll indicator*/
-
-/*Jump To Top*/
-
-#target_cloud {
-  display: none;
-  position: fixed;
-  background: none;
-  top: 6%;
-  right: 1.8%;
-  z-index: 99;  
-}
-
-#jumpToTop {
-  display: none;
-  position: fixed;
-  background: none;
-  right: 2%;
-  z-index: 99;
-  cursor: pointer;
-}
-
-/*Jump To Top*/
 
 /*menu*/
 
