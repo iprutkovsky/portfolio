@@ -28,7 +28,7 @@
 						complete: animeShuffle
 					});
 				animeShuffle();
-			}, 5 * s);
+			}, 15 * s);
 		});
 
 	// Indicator of scrolling
