@@ -1,64 +1,27 @@
 ; (function () {
 
 	'use strict';
-	// -=Animations=-
-
-	// screen saver
-	let screenSaver = () =>
-		$(document).ready(function () {
-			let s = 1000;
-			setTimeout(function () {
-				let container = document.querySelector('.container');
-				container.innerHTML = '';
-				for (let i = 0; i <= 125; ++i) {
-					let blocks = document.createElement('div');
-					$(blocks).addClass('block');
-					container.appendChild(blocks);
-				}
-
-				let animeShuffle = () =>
-					anime({
-						targets: '.block',
-						translateX: () => anime.random(-520, 520),
-						translateY: () => anime.random(-340, 340),
-						scale: () => anime.random(.5, 3),
-						easing: 'linear',
-						duration: 9 * s,
-						delay: anime.stagger(9),
-						complete: animeShuffle
-					});
-				animeShuffle();
-			}, 15 * s);
-		});
-
-	// Indicator of scrolling
-	let scrollIndicator = function () {
-		let rct = document.querySelector('#jumpToTop'),
-			cld = document.querySelector('#target_cloud'),
-			pgb = document.querySelector('.progress-bar'),
-			pct = document.querySelector('#progress-bar-output');
-		window.addEventListener('scroll', function () {
-			let e = $('html')[0];
-			if (e.scrollTop > 20) {
-				rct.style.display = 'block';
-				cld.style.display = 'block';
-				pgb.style.display = 'block';
-				pct.style.display = 'block';
+	
+	let toggle = () => {
+		$('max-width button').on('click', function () {
+			let sf = document.querySelector('.skill-field'),
+				cnt = document.querySelector('.container');
+            let n = 'none',
+                b = 'block';
+			if (sf.style.display == b) {
+				sf.style.display = n;
+				// cnt.style.display = b;
+				// screenSaver();
 			}
 			else {
-				rct.style.display = 'none';
-				cld.style.display = 'none';
-				pgb.style.display = 'none';
-				pct.style.display = 'none';
+				// clearTimeout(screenSaver());
+				// cnt.style.display = n;
+				sf.style.display = b;
 			}
-			document.querySelector('#scrBar').style.height = `${e.scrollTop / (e.scrollHeight - e.clientHeight) * 100}%`;
-			document.querySelector('#jumpToTop').style.top = `${8 + e.scrollTop / (e.scrollHeight - e.clientHeight) * 82}%`;
-			document.querySelector('#progress-bar-output').innerHTML = parseInt(document.querySelector('#scrBar').style.height);
-			document.querySelector('#progress-bar-output').style.top = `${8 + e.scrollTop / (e.scrollHeight - e.clientHeight) * 82}%`;
-		});
+		})
 	}
 
-	// Containers fading
+	// Containers fading script
 	let contentWayPoint = function () {
 		let i = 0;
 		$('.animate-box').waypoint(function (direction) {
@@ -94,9 +57,8 @@
 	};
 
 	$(function () {
-		scrollIndicator();
 		contentWayPoint();
-		screenSaver();
+		toggle();
 	});
 
 }());
