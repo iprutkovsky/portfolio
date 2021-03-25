@@ -432,6 +432,10 @@ input:checked[type="checkbox"]:after {
 
 /* -=toggle=- */
 
+.skills-field {
+    margin-left: 7%;
+}
+
 .skills a {
     display: inline-block;
     background: #79a1c2;
