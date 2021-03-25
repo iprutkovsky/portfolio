@@ -9,39 +9,6 @@ $(document).ready(function () {
         document.querySelector('#progress-bar-output').innerHTML = parseInt(`${e.scrollTop / (e.scrollHeight - e.clientHeight) * 100}%`);
     });
 
-    // skills screen saver
-    let screenSaver = () =>
-        $(document).ready(function () {
-            let s = 1000;
-            let arr = ['Java', 'JDBC', 'Servlets', 'Spring', 'SQL', 'MYSQL', 'OracleSQL',
-                'Angular 8', 'Angular 9', 'Angular 10', 'TypeScript', 'Angular JS', 'HTML5', 'CSS3',
-                'Javascript', 'RxJS', 'JQuery', 'Node.js', 'Jenkins', 'GitHub',
-                'GitLab', 'AWS', 'S3', 'GC', 'Wordpress'];
-            setTimeout(function () {
-                let container = document.querySelector('.container');
-                container.innerHTML = '';
-                arr.map(v => {
-                    let blocks = document.createElement('div');
-                    $(blocks).addClass('blk');
-                    blocks.innerHTML = v;
-                    container.appendChild(blocks);
-                })
-
-                let animeShuffle = () =>
-                    anime({
-                        targets: '.blk',
-                        translateX: () => anime.random(-320, 320),
-                        translateY: () => anime.random(-230, 230),
-                        scale: () => anime.random(.5, 3),
-                        easing: 'linear',
-                        duration: 9 * s,
-                        delay: anime.stagger(9),
-                        complete: animeShuffle
-                    });
-                animeShuffle();
-            }, s);
-        });
-
     // slide-up
     $('.scroll-up-btn').click(function () {
         $('html').animate({ scrollTop: 0 });
@@ -88,5 +55,30 @@ $(document).ready(function () {
                 nav: false
             }
         }
+    });
+
+
+    $(".fullname").on("input", function () {
+        let validateName = name => /[A-Za-z]{3,}/.test(name);
+        const name = $(".fullname");
+        name.text("");
+
+        // ^[A-Za-z ]+$
+
+        if (!validateName(name.val()))
+            name.css("color", "rgb(173, 56, 56)");
+        else
+            name.css("color", "rgb(51, 51, 51)");
+    });
+
+    $(".email-input").on("input", function () {
+        let validateEmail = email => /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+        const email = $(".email-input");
+        email.text("");
+
+        if (!validateEmail(email.val()))
+            email.css("color", "rgb(173, 56, 56)");
+        else
+            email.css("color", "rgb(51, 51, 51)");
     });
 });

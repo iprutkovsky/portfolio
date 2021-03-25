@@ -1,3 +1,15 @@
+<?php
+    if($_POST["submit"]) {
+        $recipient="iprutkovsky@gmail.com";
+        $subject="subject";
+        $sender=$_POST["fullname"];
+        $senderEmail=$_POST["email-input"];
+        $message=$_POST["message"];
+    
+        $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+    
+        mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");    
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -16,7 +28,7 @@
 </head>
 
 <body>
-    <div class="scroll-up-btn">        
+    <div class="scroll-up-btn">
         <p id="progress-bar-output"></p>
         <i class="fas fa-angle-up"></i>
     </div>
@@ -54,7 +66,9 @@
                     such as Node.JS, Spring ORM, Hibernate, and Java. Introduced and expanded new
                     network technologies. Very motivated and creative personality with
                     solid working ethics.</p>
-                <a href="javascript:void(0)" onclick="location.href='https://iprutkovsky.github.io/portfolio/Prutkovsky_Ilia.docx'">Download CV</a>
+                <a href="javascript:void(0)"
+                    onclick="location.href='https://iprutkovsky.github.io/portfolio/Prutkovsky_Ilia.docx'">Download
+                    CV</a>
             </div>
         </div>
     </section>
@@ -264,60 +278,61 @@
                     <h2 class="container-heading animate-box">Skills</h2>
                 </div>
             </div>
-            <div class="row skill-field">
+            <div class="row wrapper">
+                <div class="row skill-field">
 
-                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                    <div class="skills-wrap">
-                        <h3>Java, JDBC, Servlets, Spring</h3>
+                    <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                        <div class="skills-wrap">
+                            <h3>Java, JDBC, Servlets, Spring</h3>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                    <div class="skills-wrap">
-                        <h3>Database: SQL, MYSQL, OracleSQL</h3>
+                    <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+                        <div class="skills-wrap">
+                            <h3>Database: SQL, MYSQL, OracleSQL</h3>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                    <div class="skills-wrap">
-                        <h3>SPA: Angular 8 / 9 / 10, TypeScript, Angular JS</h3>
+                    <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                        <div class="skills-wrap">
+                            <h3>SPA: Angular 8 / 9 / 10, TypeScript, Angular JS</h3>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                    <div class="skills-wrap">
-                        <h3>HTML5, CSS3, Javascript, RxJS, JQuery, Node.js</h3>
+                    <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+                        <div class="skills-wrap">
+                            <h3>HTML5, CSS3, Javascript, RxJS, JQuery, Node.js</h3>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                    <div class="skills-wrap">
-                        <h3>Build/Deploy: Jenkins</h3>
+                    <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                        <div class="skills-wrap">
+                            <h3>Build/Deploy: Jenkins</h3>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                    <div class="skills-wrap">
-                        <h3>Versioning: GitHub, GitLab</h3>
+                    <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+                        <div class="skills-wrap">
+                            <h3>Versioning: GitHub, GitLab</h3>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                    <div class="skills-wrap">
-                        <h3>Cloud: AWS, S3, GC</h3>
+                    <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                        <div class="skills-wrap">
+                            <h3>Cloud: AWS, S3, GC</h3>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-                    <div class="skills-wrap">
-                        <h3>CMS: Wordpress, Sales Force Commerce Cloud</h3>
+                    <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+                        <div class="skills-wrap">
+                            <h3>CMS: Wordpress, Sales Force Commerce Cloud</h3>
+                        </div>
                     </div>
-                </div>
 
+                </div>
+                <div class="container"></div>
             </div>
-            <div class="container"></div>
-            <!-- <button onclick="toggle();">Read more</button> -->
-            <a href="#" onclick="toggle(); return false;">Read more</a>
+            <!-- <a href="javascript:void(0)" onclick="toggle(); return false;">Read more</a> -->
         </div>
     </section>
 
@@ -332,22 +347,30 @@
             <div class="carousel owl-carousel">
                 <div class="card">
                     <div class="box">
-                        <img src="images/brain_drain.png" alt="">
+                        <a href="https://www.braindrain.com/en" target="blank" rel="noopener noreferrer">
+                            <img src="images/brain_drain.png" alt="Card image">
+                        </a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="images/neighborhood_dentistry.png" alt="">
+                        <a href="https://nycdental-dds.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/neighborhood_dentistry.png" alt="Card image">
+                        </a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="images/feminine_revival.png" alt="">
+                        <a href="https://femininerevival.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/feminine_revival.png" alt="Card image">
+                        </a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="images/volshteyn.png" alt="">
+                        <a href="http://volshteynlaw.com/en/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/volshteyn.png" alt="Card image">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -381,25 +404,25 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message</div>
-                    <form class="contact-form" action="#" method="POST">
+                    <form class="contact-form" action="index.php" method="POST">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" class="fullname" placeholder="Name">
+                                <input type="text" class="fullname" placeholder="Name" required>
                             </div>
                             <div class="field email">
-                                <input type="text" class="email-input" placeholder="Email">
+                                <input type="text" class="email-input" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" class="subject" placeholder="Subject">
+                            <input type="text" class="subject" placeholder="Subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea class="message" cols="30" rows="10" placeholder="Message..."></textarea>
+                            <textarea class="message" cols="30" rows="10" placeholder="Message..." required></textarea>
                         </div>
                         <div class="button-area">
                             <button class="send-msg" type="submit" name="send">Send</button>
                         </div>
-                    </form>
+                    </form>                    
                 </div>
             </div>
         </div>
@@ -407,7 +430,15 @@
 
     <!-- footer section start -->
     <footer>
-        <span><span class="far fa-copyright"></span> 2020 All rights reserved.</span>
+        <div class="social_media">
+            <div class="row">
+                <a href="https://www.facebook.com/ilia.prutkovsky" target="_blank" rel="noopener noreferrer"><img
+                        src="./images/facebook_i_s.png"></a>
+                <span><span class="far fa-copyright"></span> 2020 All rights reserved.</span>
+                <a href="https://www.linkedin.com/in/ilia-prutkovsky-60837b41/" target="_blank"
+                    rel="noopener noreferrer"><img src="./images/linkedin_i_s.png"></a>
+            </div>
+        </div>
     </footer>
 
     <script src="js/bootstrap.min.js"></script>

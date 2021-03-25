@@ -1,7 +1,6 @@
 /*  import google fonts */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
-
 * {
     margin: 0;
     padding: 0;
@@ -171,7 +170,7 @@ section {
 
 .scroll-up-btn i {
     position: relative;
-    bottom: 40%;    
+    bottom: 40%;
     font-size: 30px;
 }
 
@@ -365,10 +364,6 @@ section {
 
 /* skills section styling */
 
-.skills .skills-content .column {
-    width: calc(50% - 30px);
-}
-
 .skills a {
     display: inline-block;
     background: #79a1c2;
@@ -377,6 +372,7 @@ section {
     font-weight: 500;
     padding: 8px 16px;
     margin-top: 4%;
+    bottom: 25%;
     border-radius: 6px;
     border: 2px solid #79a1c2;
     transition: all 0.3s ease;
@@ -429,6 +425,47 @@ section {
     -ms-transform: scaleX(1);
     -o-transform: scaleX(1);
     transform: scaleX(1);
+}
+
+.skills .wrapper {
+    position: relative;
+}
+
+/* .container,
+.skill-field {
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border: #000 solid;
+} */
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clear: both;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* border: #000 solid; */
+    /* min-width: 50%;
+    min-height: 50%;
+    z-index: 99; */
+}
+
+.blk {
+    display: flex;
+    position: absolute;
+    width: 90px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    /* background: url(../images/block_s.png); */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* projects section styling */
@@ -533,7 +570,7 @@ section {
 }
 
 .contact .contact-content .info .sub-title {
-    color: #333;
+    color: #333333;
 }
 
 .contact .right form .fields {
@@ -605,10 +642,10 @@ section {
 /* footer section styling */
 
 footer {
-    background: #111;
     padding: 15px 23px;
-    color: #fff;
+    color: #111;
     text-align: center;
+    opacity: .9;
 }
 
 footer span a {
@@ -618,6 +655,23 @@ footer span a {
 
 footer span a:hover {
     text-decoration: underline;
+}
+
+.social_media {
+    display: flex;
+    flex-direction: column;
+}
+
+.social_media a {
+    border-radius: 50px;
+    margin: 0 10px 5px 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.social_media a:hover {
+    background-color: linear-gradient(110deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+    animation: rotate 1s linear infinite;
 }
 
 /* responsive media query start */
