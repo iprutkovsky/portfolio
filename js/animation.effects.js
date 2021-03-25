@@ -4,11 +4,11 @@
 
 	let toggle = () => {
 		$('#tglBtn').on('change', function () {
-			let sf = $('.skill-field'),
+			let sf = $('.skills-field'),
 				cnt = $('.container');
 				
 			if ($(this).is(':checked')) {
-				sf.css('text-indent', '-250%');
+				sf.css('text-indent', '-300%');
 				cnt.css('display', 'block');
 				screenSaver();
 			}
