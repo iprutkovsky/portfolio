@@ -3,21 +3,20 @@
 	'use strict';
 
 	let toggle = () => {
-		$('.max-width a').on('click', function () {
-			let sf = document.querySelector('.skill-field'),
-				cnt = document.querySelector('.container');
-			let n = 'none',
-				b = 'block';
-			if (sf.style.display == b) {
-				sf.style.display = n;
-				cnt.style.display = b;
+		$('#tglBtn').on('change', function () {
+			let sf = $('.skill-field'),
+				cnt = $('.container');
+				
+			if ($(this).is(':checked')) {
+				sf.css('text-indent', '-250%');
+				cnt.css('display', 'block');
 				screenSaver();
 			}
 			else {
 				clearTimeout(screenSaver());
-				cnt.style.display = n;
-				sf.style.display = b;
-			}
+				cnt.css('display', 'none');
+				sf.css('text-indent', '0%');
+			}			
 		})
 	}
 
@@ -43,7 +42,7 @@
 					anime({
 						targets: '.blk',
 						translateX: () => anime.random(-550, 550),
-						translateY: () => anime.random(-100, 100),
+						translateY: () => anime.random(-115, 115),
 						scale: () => anime.random(.5, 3),
 						easing: 'linear',
 						duration: 9 * s,
@@ -91,7 +90,7 @@
 
 	$(function () {
 		contentWayPoint();
-		// toggle();
+		toggle();
 	});
 
 }());
