@@ -63,12 +63,7 @@ $(document).ready(function () {
         const name = $(".fullname");
         name.text("");
 
-        // ^[A-Za-z ]+$
-
-        if (!validateName(name.val()))
-            name.css("color", "rgb(173, 56, 56)");
-        else
-            name.css("color", "rgb(51, 51, 51)");
+        !validateName(name.val()) ? name.css("color", "rgb(173, 56, 56)") : name.css("color", "rgb(51, 51, 51)");
     });
 
     $(".email-input").on("input", function () {
@@ -76,9 +71,6 @@ $(document).ready(function () {
         const email = $(".email-input");
         email.text("");
 
-        if (!validateEmail(email.val()))
-            email.css("color", "rgb(173, 56, 56)");
-        else
-            email.css("color", "rgb(51, 51, 51)");
+        !validateEmail(email.val()) ? email.css("color", "rgb(173, 56, 56)") : email.css("color", "rgb(51, 51, 51)");
     });
 });
