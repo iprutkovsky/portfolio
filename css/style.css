@@ -1,6 +1,7 @@
 /*  import google fonts */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
 * {
     margin: 0;
     padding: 0;
@@ -43,25 +44,59 @@ body {
 /* all similar content styling codes */
 
 section {
-    padding: 100px 0;
+    padding: 1.5rem 0;
 }
 
 .max-width {
-    width: 68.75%;
-    max-width: 68.75%;
-    padding: 0 80px;
+    width: 68.75vw;
+    max-width: 68.75vw;
+    padding: 0 5rem;
     margin: auto;
 }
 
-.summary, .education, .experience, .skills, .projects, .contact, footer {
+.project-name {
+    display: flex;
+    flex-wrap: wrap;
+    margin: .75em 0 .75em;
+}
+
+.project-name h2 {
+    width: 50vw;
+    margin: 0;
+}
+
+.skills-header {
+    float: left;
+}
+
+.timeline-header {
+    align-items: center;
+    justify-content: space-around;
+}
+
+.summary,
+.education,
+.experience,
+.skills,
+.projects,
+.contact,
+footer {
     font-family: 'Roboto', sans-serif;
 }
 
-.summary, .education, .experience .serv-content, .skills .skills-content, .contact .contact-content {
+.summary,
+.education,
+.experience .serv-content,
+.skills .skills-content,
+.contact .contact-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+
+.summary-header {
+    margin-top: 2em;
 }
 
 .container-heading {
@@ -78,15 +113,15 @@ section {
 
 .navbar {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 999;
-    padding: 30px 0;
+    padding: 1.875em 0;
     font-family: 'Roboto', sans-serif;
     transition: all 0.3s ease;
 }
 
 .navbar.sticky {
-    padding: 15px 0;
+    padding: 1em 0;
     background: #79a1c2;
 }
 
@@ -98,8 +133,9 @@ section {
 
 .navbar .logo a {
     color: #fff;
-    font-size: 35px;
+    font-size: 2.1875em;
     font-weight: 600;
+    margin-left: -.58em;
 }
 
 .navbar .logo a span {
@@ -118,11 +154,11 @@ section {
 
 .navbar .menu li a {
     display: block;
-    line-height: 30px;
+    line-height: 1.875em;
     color: #fff;
-    font-size: 18px;
+    font-size: 1.4em;
     font-weight: 500;
-    margin-left: 25px;
+    margin: .75em 0 0 1.5625em;
     transition: color 0.3s ease;
 }
 
@@ -138,7 +174,7 @@ section {
 
 .menu-btn {
     color: #fff;
-    font-size: 23px;
+    font-size: 1.25em;
     cursor: pointer;
     display: none;
 }
@@ -186,31 +222,31 @@ section {
 
 /* summary section styling */
 
-.summary-description, .education-description {
-    left: 1.6%;
-    width: 96.5%;
+.summary-description,
+.education-description {
+    width: 65vw;
     position: block;
-    border: 3px solid #fff;
-    padding: 1.5em;
-    margin-left: 68px;
-    font-size: 1.3em;
+    border: .1875em solid #fff;
+    padding: 1em;
+    margin: -1.5em 0 0 0;
+    font-size: 1.4em;
     font-weight: 500;
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;
-    border-radius: 6px;
+    border-radius: .375em;
 }
 
 .summary-description a {
     display: inline-block;
     background: #79a1c2;
     color: #fff;
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: 500;
-    padding: 10px 30px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid #79a1c2;
+    padding: 0 1em;
+    margin-top: .5em;
+    border-radius: .375em;
+    border: .125em solid #79a1c2;
     transition: all 0.3s ease;
 }
 
@@ -224,7 +260,7 @@ section {
 .timeline-centered {
     position: relative;
     width: 100%;
-    margin-bottom: 30px;
+    margin: -2em 0 1.875em;
 }
 
 .timeline-centered .timeline-entry {
@@ -315,20 +351,26 @@ section {
     opacity: .4;
     -ms-filter: alpha(opacity=40);
     filter: alpha(opacity=40);
-    font-size: 16px;
+    font-size: 1em;
+}
+
+.timeline-label h3 {
+    margin: .125em 0;
 }
 
 .timeline-label span {
     display: inline;
+    float: right;
     color: #000;
+    font-size: 1.25em;
     font-weight: 600;
 }
 
-.timeline-label p {
+/* .timeline-label p {
     display: inline-block;
     font-size: 1.3em;
     font-weight: 500;
-}
+} */
 
 .timeline-label ul {
     font-size: 1.3em;
@@ -384,7 +426,7 @@ input[type="checkbox"] {
     -ms-appearance: none;
     -o-appearance: none;
     background: linear-gradient(0deg, #333, #000);
-    border-radius: 10px;    
+    border-radius: 10px;
     box-shadow: 0 0 0 4px #353535;
     transition: .5s;
 }
@@ -583,9 +625,9 @@ input:checked[type="checkbox"]:after {
     height: 13px;
     width: 13px;
     margin: 0 5px;
-    outline: none!important;
+    outline: none !important;
     border-radius: 50%;
-    border: 2px solid #79a1c2!important;
+    border: 2px solid #79a1c2 !important;
     transition: all 0.3s ease;
 }
 
@@ -594,8 +636,9 @@ input:checked[type="checkbox"]:after {
     border-radius: 14px;
 }
 
-.owl-dot.active, .owl-dot:hover {
-    background: #79a1c2!important;
+.owl-dot.active,
+.owl-dot:hover {
+    background: #79a1c2 !important;
 }
 
 /* contact section styling */
@@ -637,7 +680,8 @@ input:checked[type="checkbox"]:after {
     display: flex;
 }
 
-.contact .right form .field, .contact .right form .fields .field {
+.contact .right form .field,
+.contact .right form .fields .field {
     height: 45px;
     width: 100%;
     margin-bottom: 15px;
@@ -652,7 +696,8 @@ input:checked[type="checkbox"]:after {
     margin-right: 10px;
 }
 
-.contact .right form .field input, .contact .right form .textarea textarea {
+.contact .right form .field input,
+.contact .right form .textarea textarea {
     height: 100%;
     width: 100%;
     border: 1px solid lightgrey;
@@ -664,7 +709,8 @@ input:checked[type="checkbox"]:after {
     transition: all 0.3s ease;
 }
 
-.contact .right form .field input:focus, .contact .right form .textarea textarea:focus {
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus {
     border-color: #b3b3b3;
 }
 
@@ -681,7 +727,7 @@ input:checked[type="checkbox"]:after {
 .right form .button-area button {
     color: #fff;
     display: block;
-    width: 160px!important;
+    width: 160px !important;
     height: 45px;
     outline: none;
     font-size: 18px;
@@ -732,83 +778,4 @@ footer span a:hover {
 .social_media a:hover {
     background-color: linear-gradient(110deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
     animation: rotate 1s linear infinite;
-}
-
-/* responsive media query start */
-
-@media (max-width: 991px) {
-    .max-width {
-        padding: 0 50px;
-    }
-}
-
-@media (max-width: 947px) {
-    .menu-btn {
-        display: block;
-        z-index: 999;
-    }
-    .menu-btn i.active:before {
-        content: "\f00d";
-    }
-    .navbar .menu {
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        top: 0;
-        background: #111;
-        text-align: center;
-        padding-top: 80px;
-        transition: all 0.3s ease;
-    }
-    .navbar .menu.active {
-        left: 0;
-    }
-    .navbar .menu li {
-        display: block;
-    }
-    .navbar .menu li a {
-        display: inline-block;
-        margin: 20px 0;
-        font-size: 25px;
-    }
-    .max-width {
-        max-width: 930px;
-    }
-    .summary, .education, .column {
-        width: 100%;
-    }
-    .skills .skills-content .column, .contact .contact-content .column {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-}
-
-@media (max-width: 690px) {
-    .max-width {
-        padding: 0 23px;
-    }
-}
-
-@media (max-width: 500px) {
-    .summary .right .text, .skills .skills-content .left .text {
-        font-size: 19px;
-    }
-    .contact .right form .fields {
-        flex-direction: column;
-    }
-    .contact .right form .name, .contact .right form .email {
-        margin: 0;
-    }
-    .right form .error-box {
-        width: 150px;
-    }
-    .scroll-up-btn {
-        right: 15px;
-        bottom: 15px;
-        height: 38px;
-        width: 35px;
-        font-size: 23px;
-        line-height: 38px;
-    }
 }

@@ -6,7 +6,7 @@
 		$('#tglBtn').on('change', function () {
 			let sf = $('.skills-field'),
 				cnt = $('.container');
-				
+
 			if ($(this).is(':checked')) {
 				sf.css('text-indent', '-300%');
 				cnt.css('display', 'block');
@@ -16,7 +16,7 @@
 				clearTimeout(screenSaver());
 				cnt.css('display', 'none');
 				sf.css('text-indent', '0%');
-			}			
+			}
 		})
 	}
 
@@ -24,10 +24,10 @@
 	let screenSaver = () =>
 		$(document).ready(function () {
 			let s = 1000;
-			let arr = ['Java', 'JDBC', 'Servlets', 'Spring', 'SQL', 'MYSQL', 'OracleSQL',
-				'Angular 8', 'Angular 9', 'Angular 10', 'TypeScript', 'Angular JS', 'HTML5', 'CSS3',
+			let arr = ['Java', 'JDBC', 'Servlets', 'Spring', 'SQL', 'MySQL', 'OracleSQL', 'PostgreSQL',
+				'Angular 8', 'Angular 10', 'Angular 14', 'TypeScript', 'React', 'HTML5', 'CSS3',
 				'Javascript', 'RxJS', 'JQuery', 'Node.js', 'Jenkins', 'GitHub',
-				'GitLab', 'AWS', 'S3', 'GC', 'Wordpress'];
+				'AWS', 'S3', 'GC', 'Wordpress'];
 			setTimeout(function () {
 				let container = document.querySelector('.container');
 				container.innerHTML = '';
