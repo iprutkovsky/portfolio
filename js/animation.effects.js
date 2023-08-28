@@ -8,7 +8,7 @@
 				cnt = $('.container');
 
 			if ($(this).is(':checked')) {
-				sf.css('text-indent', '-300%');
+				sf.css('text-indent', '-350%');
 				cnt.css('display', 'block');
 				screenSaver();
 			}
