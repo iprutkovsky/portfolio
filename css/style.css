@@ -69,7 +69,7 @@ section {
 }
 
 .project-name h2 {
-    width: 50vw;
+    width: 37vw;
     margin: 0;
 }
 
@@ -337,6 +337,10 @@ footer {
 }
 
 /* -=Triangle=- */
+.timeline-label h3 {
+    margin: .125em 0;
+    font-size: 1.261vw;
+}
 
 .timeline-label h2 {
     display: inline;
@@ -344,11 +348,6 @@ footer {
     font-size: 1.051vw;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
-}
-
-.timeline-label h3 {
-    margin: .125em 0;
-    font-size: 1.261vw;
 }
 
 .timeline-label span {
@@ -360,9 +359,18 @@ footer {
 }
 
 .timeline-label ul {
+    margin-bottom: -.75em;
     font-size: 1.3em;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
+}
+
+.title-row {
+    display: flex;
+    height: 1.5em;
+    margin-bottom: 1em;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* education section styling */
@@ -466,17 +474,17 @@ input:checked[type="checkbox"]:after {
 .skills-field {
     display: flex;
     width: 50vw;
-    flex-wrap: wrap;    
-    margin-left: 8vw;    
+    flex-wrap: wrap;
+    margin-left: 8vw;
 }
 
-.skills-wrap h3 {    
+.skills-wrap h3 {
     width: 23vw;
     margin-bottom: .25em;
     text-decoration: none;
     font-size: 1.051vw;
-    font-family: 'Roboto', sans-serif;    
-    transition: 0.3s;    
+    font-family: 'Roboto', sans-serif;
+    transition: 0.3s;
 }
 
 .skills-wrap h3:after {
@@ -490,13 +498,13 @@ input:checked[type="checkbox"]:after {
     border-radius: 0.125em;
     background-color: #79a1c2;
     opacity: .4;
-    visibility: hidden;    
-    transform: scaleX(0);    
+    visibility: hidden;
+    transform: scaleX(0);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .skills-wrap h3:hover:after {
-    visibility: visible;    
+    visibility: visible;
     transform: scaleX(1);
 }
 
@@ -522,7 +530,7 @@ input:checked[type="checkbox"]:after {
     top: 12vh;
     left: 28vw;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     box-shadow: .625em .625em .625em rgba(0, 0, 0, 0.2);
 }
 
