@@ -474,13 +474,17 @@ input:checked[type="checkbox"]:after {
 .skills-field {
     display: flex;
     width: 50vw;
-    flex-wrap: wrap;
     margin-left: 8vw;
+}
+
+.left-field,
+.right-field {
+    display: grid;
+    width: 24vw;
 }
 
 .skills-wrap h3 {
     width: 23vw;
-    margin-bottom: .25em;
     text-decoration: none;
     font-size: 1.051vw;
     font-family: 'Roboto', sans-serif;
@@ -516,7 +520,7 @@ input:checked[type="checkbox"]:after {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 65vw;
     height: 15.1875em;
     display: block;
     z-index: 99;
@@ -528,7 +532,7 @@ input:checked[type="checkbox"]:after {
     width: 5.625em;
     height: 2.1875em;
     top: 12vh;
-    left: 28vw;
+    left: 30vw;
     justify-content: center;
     align-items: center;
     box-shadow: .625em .625em .625em rgba(0, 0, 0, 0.2);
