@@ -55,34 +55,30 @@
 
 	// Containers fading script
 	let contentWayPoint = () => {
-		let i = 0;
 		$('.animate-box').waypoint(function (direction) {
-
 			if (direction == 'down' && !$(this.element).hasClass('animated')) {
-				++i;
 				$(this.element).addClass('item-animate');
 				setTimeout(() => {
 					$('body .animate-box.item-animate').each(function (v) {
 						let e = $(this);
-						let animateEffect = {
+						let animatedEffect = {
 							'fadeInLeft': 'fadeInLeft animated',
 							'fadeInRight': 'fadeInRight animated',
-							'fadeInUp': 'fadeInUp animated',
-							'fadeInDown': 'fadeInDown animated'
+							'fadeInDown': 'fadeInDown animated',
+							'fadeInUp': 'fadeInUp animated'							
 						};
 
 						setTimeout(() => {
-							e.addClass(animateEffect[e.data('animate-effect')]);
+							e.addClass(animatedEffect[e.data('animate-effect')]);
 							e.removeClass('item-animate');
 						}, v * 180, 'easeInOutExpo');
 					});
 				}, 100);
 			}
-
 		}, { offset: '85%' });
 	};
 
-	$(function () {
+	$(() => {
 		contentWayPoint();
 		toggle();
 	});
