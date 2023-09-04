@@ -8,7 +8,7 @@
 				cnt = $('.container');
 
 			if ($(this).is(':checked')) {
-				sf.css('text-indent', '-350%');
+				sf.css('text-indent', '-400%');
 				cnt.css('display', 'block');
 				screenSaver();
 			}
@@ -22,13 +22,13 @@
 
 	// skills screen saver
 	let screenSaver = () =>
-		$(document).ready(function () {
+		$(document).ready(() => {
 			let s = 1000;
 			let arr = ['Java', 'JDBC', 'Servlets', 'Spring', 'SQL', 'MySQL', 'OracleSQL', 'PostgreSQL',
 				'Angular 8', 'Angular 10', 'Angular 14', 'TypeScript', 'React', 'HTML5', 'CSS3',
 				'Javascript', 'RxJS', 'JQuery', 'Node.js', 'Jenkins', 'GitHub',
 				'AWS', 'S3', 'GC', 'Wordpress'];
-			setTimeout(function () {
+			setTimeout(() => {
 				let container = document.querySelector('.container');
 				container.innerHTML = '';
 				arr.map(v => {
@@ -54,31 +54,25 @@
 		});
 
 	// Containers fading script
-	let contentWayPoint = function () {
+	let contentWayPoint = () => {
 		let i = 0;
 		$('.animate-box').waypoint(function (direction) {
 
 			if (direction == 'down' && !$(this.element).hasClass('animated')) {
 				++i;
 				$(this.element).addClass('item-animate');
-				setTimeout(function () {
-
+				setTimeout(() => {
 					$('body .animate-box.item-animate').each(function (v) {
 						let e = $(this);
-						setTimeout(function () {
-							switch (e.data('animate-effect')) {
-								case 'fadeInLeft':
-									e.addClass('fadeInLeft animated');
-									break;
-								case 'fadeInRight':
-									e.addClass('fadeInRight animated');
-									break;
-								case 'fadeInUp':
-									e.addClass('fadeInUp animated');
-									break;
-								default:
-									e.addClass('fadeInDown animated');
-							}
+						let animateEffect = {
+							'fadeInLeft': 'fadeInLeft animated',
+							'fadeInRight': 'fadeInRight animated',
+							'fadeInUp': 'fadeInUp animated',
+							'fadeInDown': 'fadeInDown animated'
+						};
+
+						setTimeout(() => {
+							e.addClass(animateEffect[e.data('animate-effect')]);
 							e.removeClass('item-animate');
 						}, v * 180, 'easeInOutExpo');
 					});
