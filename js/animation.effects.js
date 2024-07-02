@@ -1,7 +1,6 @@
 ; (function () {
-
 	'use strict';
-
+	
 	let toggle = () => {
 		$('#tglBtn').on('change', function () {
 			let sf = $('.skills-field'),
@@ -24,10 +23,16 @@
 	let screenSaver = () =>
 		$(document).ready(() => {
 			let s = 1000;
-			let arr = ['Java', 'JDBC', 'Servlets', 'Spring', 'SQL', 'MySQL', 'OracleSQL', 'PostgreSQL',
-				'Angular 8', 'Angular 10', 'Angular 14', 'TypeScript', 'React', 'HTML5', 'CSS3',
-				'Javascript', 'RxJS', 'JQuery', 'Node.js', 'Jenkins', 'GitHub',
-				'AWS', 'S3', 'GC', 'Wordpress'];
+			let arr = [
+				'AWS', 'Angular 16', 'C#',
+				'CSS3', 'GC', 'GitHub',
+				'HTML5', 'JDBC', 'JQuery',
+				'Java', 'Javascript', 'MySQL',
+				'NoSQL', 'Node.js', 'OracleSQL',
+				'PostgreSQL', 'RxJS', 'S3',
+				'SASS', 'SCSS', 'SQL',
+				'TypeScript', 'Wordpress'
+			];
 			setTimeout(() => {
 				let container = document.querySelector('.container');
 				container.innerHTML = '';
@@ -36,7 +41,7 @@
 					$(blocks).addClass('blk');
 					blocks.innerHTML = v;
 					container.appendChild(blocks);
-				})
+				});
 
 				let animeShuffle = () =>
 					anime({
@@ -65,7 +70,7 @@
 							'fadeInLeft': 'fadeInLeft animated',
 							'fadeInRight': 'fadeInRight animated',
 							'fadeInDown': 'fadeInDown animated',
-							'fadeInUp': 'fadeInUp animated'							
+							'fadeInUp': 'fadeInUp animated'
 						};
 
 						setTimeout(() => {
@@ -82,5 +87,4 @@
 		contentWayPoint();
 		toggle();
 	});
-
 }());
