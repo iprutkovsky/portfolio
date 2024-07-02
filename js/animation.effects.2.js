@@ -29,7 +29,7 @@ $(document).ready(function () {
 
     // typing text animation 
     var typed = new Typed(".typing", {
-        strings: ["Freelancer", "Network Engineer", "Software Developer"],
+        strings: ['Network Engineer', 'Front-end Developer', 'Full-stack Angular Developer'],
         typeSpeed: 140,
         backSpeed: 80,
         loop: true
@@ -62,21 +62,13 @@ $(document).ready(function () {
         let validateName = name => /[A-Za-z]{3,}/.test(name);
         const name = $(".fullname");
         name.text("");
-
-        if (!validateName(name.val()))
-            name.css("color", "rgb(238, 53, 53)");
-        else
-            name.css("color", "rgb(51, 51, 51)");
+        name.css("color", !validateName(name.val()) ? "rgb(238, 53, 53)" : "rgb(51, 51, 51)");
     });
 
     $(".email-input").on("input", function () {
         let validateEmail = email => /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
         const email = $(".email-input");
         email.text("");
-
-        if (!validateEmail(email.val()))
-            email.css("color", "rgb(238, 53, 53)");
-        else
-            email.css("color", "rgb(51, 51, 51)");
+        email.css("color", !validateEmail(email.val()) ? "rgb(238, 53, 53)" : "rgb(51, 51, 51)");
     });
 });
