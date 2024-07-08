@@ -17,7 +17,7 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 0.788vw;
+    font-size: 1.12em;
     line-height: 1.8;
     background: url(../images/spiral_staircase.png) no-repeat fixed;
 }
@@ -56,10 +56,9 @@ section {
 }
 
 .max-width {
-    width: 68.75vw;
-    max-width: 68.75vw;
-    padding: 0 5rem;
     margin: auto;
+    padding: 0 3.25em;
+    width: 87em;
 }
 
 .project-name {
@@ -68,8 +67,8 @@ section {
     margin: .75em 0 .75em;
 }
 
-.project-name h2 {
-    width: 37vw;
+.project-name h2 {    
+    width: 36em;
     margin: 0;
 }
 
@@ -108,20 +107,20 @@ footer {
 }
 
 .container-heading {
-    font-size: 0.946vw;
-    margin-bottom: 2em;
+    font-size: 1.2em;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.21vw;
+    letter-spacing: 0.225em;
     line-height: 1.8;
+    margin-bottom: 2em;    
     position: relative;
+    text-transform: uppercase;
 }
 
 /* navbar styling */
 
 .navbar {
     position: fixed;
-    width: 100vw;
+    width: 100%;
     z-index: 999;
     padding: 1.875em 0;
     font-family: 'Roboto', sans-serif;
@@ -141,7 +140,7 @@ footer {
 
 .navbar .logo a {
     color: #fff;
-    font-size: 1.839vw;
+    font-size: 2.35em;
     font-weight: 600;
     margin-left: -.58em;
 }
@@ -162,11 +161,10 @@ footer {
 
 .navbar .menu li a {
     display: block;
-    line-height: 1.576vw;
     color: #fff;
-    font-size: 1.156vw;
+    font-size: 1.475em;
     font-weight: 500;
-    margin: 0.631vw 0 0 1.314vw;
+    margin: 0.545em 0 0 1.125em;
     transition: color 0.3s ease;
 }
 
@@ -231,7 +229,7 @@ footer {
 
 .summary-description,
 .education-description {
-    width: 65vw;
+    width: 58.75em;
     position: block;
     border: .1875em solid #fff;
     padding: 1em;
@@ -339,13 +337,13 @@ footer {
 /* -=Triangle=- */
 .timeline-label h3 {
     margin: .125em 0;
-    font-size: 1.261vw;
+    font-size: 1.6em;
 }
 
 .timeline-label h2 {
     display: inline;
     color: #000;
-    font-size: 1.051vw;
+    font-size: 1.325em;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
 }
@@ -354,7 +352,7 @@ footer {
     display: inline;
     float: right;
     color: #000;
-    font-size: 1.051vw;
+    font-size: 1.325em;
     font-weight: 600;
 }
 
@@ -380,21 +378,21 @@ footer {
     float: left;
     margin: 0;
     color: #374054;
-    font-size: 1.051vw;
+    font-size: 1.325em;
     font-family: 'Roboto', sans-serif;
 }
 
 .education-block span {
     color: black;
     float: right;
-    font-size: 1.051vw;
+    font-size: 1.325em;
     font-weight: 600;
 }
 
 .education-block h4 {
     color: Black;
     clear: both;
-    font-size: 0.946vw;
+    font-size: .86em;
     font-weight: 800;
     margin: 0 0 1em 0;
     padding-top: .625em;
@@ -472,39 +470,39 @@ input:checked[type="checkbox"]:after {
 /* -=toggle=- */
 
 .skills-field {
-    display: flex;
-    width: 50vw;
-    margin-left: 8vw;
+    display: flex;    
+    margin-left: 10em;
 }
 
 .left-field,
 .right-field {
-    display: grid;
-    width: 24vw;
+    display: flex;
+    flex-direction: column;
+    width: 34em;
 }
 
 .skills-wrap h3 {
-    width: 23vw;
-    text-decoration: none;
-    font-size: 1.051vw;
     font-family: 'Roboto', sans-serif;
+    font-size: 1.325em;    
+    text-decoration: none;
     transition: 0.3s;
+    width: 25em;
 }
 
 .skills-wrap h3:after {
-    content: "";
-    position: absolute;
-    height: 2vh;
-    width: 23vw;
-    left: 0;
-    right: 0;
-    border: .5px dashed #79a1c2;
-    border-radius: 0.125em;
     background-color: #79a1c2;
+    border: .03125em dashed #79a1c2;
+    border-radius: 0.125em;
+    content: "";
+    height: 1em;
+    left: 0;
     opacity: .4;
-    visibility: hidden;
+    position: absolute;
+    right: 0;
     transform: scaleX(0);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    visibility: hidden;
+    width: 25em;
 }
 
 .skills-wrap h3:hover:after {
@@ -512,7 +510,7 @@ input:checked[type="checkbox"]:after {
     transform: scaleX(1);
 }
 
-.skills .wrapper {
+.wrapper {
     position: relative;
 }
 
@@ -520,10 +518,10 @@ input:checked[type="checkbox"]:after {
     position: absolute;
     top: 0;
     left: 0;
-    width: 65vw;
-    height: 15.1875em;
+    width: 82em;
+    height: 17em;
     display: block;
-    z-index: 99;
+    z-index: -99;
 }
 
 .blk {
@@ -531,8 +529,8 @@ input:checked[type="checkbox"]:after {
     position: absolute;
     width: 5.625em;
     height: 2.1875em;
-    top: 12vh;
-    left: 30vw;
+    top: 8em;
+    left: 38em;
     justify-content: center;
     align-items: center;
     box-shadow: .625em .625em .625em rgba(0, 0, 0, 0.2);

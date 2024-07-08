@@ -9,11 +9,13 @@
 			if ($(this).is(':checked')) {
 				sf.css('text-indent', '-400%');
 				cnt.css('display', 'block');
+				cnt.css('z-index', '99');
 				screenSaver();
 			}
 			else {
 				clearTimeout(screenSaver());
 				cnt.css('display', 'none');
+				cnt.css('z-index', '-99');
 				sf.css('text-indent', '0%');
 			}
 		})
