@@ -26,10 +26,13 @@
 		$(document).ready(() => {
 			let s = 1000;
 			let arr = [
-				'AWS', 'Angular 16', 'C#',
-				'CSS3', 'GC', 'GitHub',
+				'AJAX', 'Azure', 'AWS',
+				'Angular 18', 'Bootstrap',
+				'C#', 'Cosmos DB', 'CSS3',
+				'GC', 'GitHub', 'GraphQL',
 				'HTML5', 'JDBC', 'JQuery',
-				'Java', 'Javascript', 'MySQL',
+				'Java', 'Javascript', 'Kendo UI',
+				'Material UI', 'MySQL',
 				'NoSQL', 'Node.js', 'OracleSQL',
 				'PostgreSQL', 'RxJS', 'S3',
 				'SASS', 'SCSS', 'SQL',
